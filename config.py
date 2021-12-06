@@ -47,8 +47,8 @@ class Config:
     STREAM_URL=os.environ.get("STARTUP_STREAM", "https://www.youtube.com/watch?v=zcrUCvBD16k")
    
     #Database
-    DATABASE_URI=os.environ.get("DATABASE_URI",mongodb+srv://Cluster0:Cluster0@cluster0.5ft8v.mongodb.net/UserBot?retryWrites=true&w=majority)
-    DATABASE_NAME=os.environ.get("DATABASE_NAME", "Cluster0")
+    DATABASE_URI=os.environ.get("DATABASE_URI", None)
+    DATABASE_NAME=os.environ.get("DATABASE_NAME", "VCPlayerBot")
 
 
     #heroku
