@@ -31,24 +31,24 @@ except ModuleNotFoundError:
 class Config:
     #Telegram API Stuffs
     load_dotenv()  # load enviroment variables from .env file
-    ADMIN = os.environ.get("ADMINS", '')
+    ADMIN = os.environ.get("ADMINS", '1268206396')
     SUDO = [int(admin) for admin in (ADMIN).split()] # Exclusive for heroku vars configuration.
     ADMINS = [int(admin) for admin in (ADMIN).split()] #group admins will be appended to this list.
-    API_ID = int(os.environ.get("API_ID", ''))
-    API_HASH = os.environ.get("API_HASH", "")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "")     
-    SESSION = os.environ.get("SESSION_STRING", "")
+    API_ID = int(os.environ.get("API_ID", '7624036'))
+    API_HASH = os.environ.get("API_HASH", "94b847914dab197ade755544414edf90")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "2044909123:AAEV4RVWWHDoqo0mFRK1XCQVWJYAmmyq4EQ")     
+    SESSION = os.environ.get("SESSION_STRING", "BAASjXnZwlZcY1dBBKxXPIwqyR4DmRjOHK7MNuk_2BAkpu2XvR5flvD0h7V4ihHo9aLoSE947fLZHABf4IWQd69cicWof1KWrKzCtiCcmc2YD6Dw0fRXvKkHnJrlUGmVVYawcTPluTSshRgh-SAYHKY4nG_qiRzjE9BsztP4e2mq7bo92sGGLI2mT2BUtAs_QeZCDmnJMMzo3nI1D7-7x_Nx6gJFneyIpd3O0jpEdbkZoKCNOjB_9eDziapROU_noCNis856NUiYCYc45nmGCKCFxjZLjVd58HrDoAk3pplRUvLvqQCd_8E_A6r7_YEtWI_bUJbAMLxUFsYibNajTJJxcpju_gA")
 
     #Stream Chat and Log Group
-    CHAT = int(os.environ.get("CHAT", ""))
+    CHAT = int(os.environ.get("CHAT", "-1001524238827"))
     LOG_GROUP=os.environ.get("LOG_GROUP", "")
 
     #Stream 
     STREAM_URL=os.environ.get("STARTUP_STREAM", "https://www.youtube.com/watch?v=zcrUCvBD16k")
    
     #Database
-    DATABASE_URI=os.environ.get("DATABASE_URI", None)
-    DATABASE_NAME=os.environ.get("DATABASE_NAME", "VCPlayerBot")
+    DATABASE_URI=os.environ.get("DATABASE_URI", mongodb+srv://Cluster0:Cluster0@cluster0.5ft8v.mongodb.net/UserBot?retryWrites=true&w=majority)
+    DATABASE_NAME=os.environ.get("DATABASE_NAME", "Cluster0")
 
 
     #heroku
@@ -77,7 +77,7 @@ class Config:
     #Quality vars
     E_BITRATE=os.environ.get("BITRATE", False)
     E_FPS=os.environ.get("FPS", False)
-    CUSTOM_QUALITY=os.environ.get("QUALITY", "100")
+    CUSTOM_QUALITY=os.environ.get("QUALITY", "high")
 
     #Search filters for cplay
     FILTERS =  [filter.lower() for filter in (os.environ.get("FILTERS", "video document")).split(" ")]
